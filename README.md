@@ -7,3 +7,5 @@ Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
 [INFO] Finished at: 2017-09-19T19:21:05+03:00
 [INFO] Final Memory: 10M/212M
 [INFO] ------------------------------------------------------------------------
+
+[![Build Status](https://travis-ci.org/maegwyn/myDemoApp.svg?branch=master)](https://travis-ci.org/maegwyn/myDemoApp)
