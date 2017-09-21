@@ -10,4 +10,4 @@ Tests run: 5, Failures: 0, Errors: 0, Skipped: 0
 
 [![Build Status](https://travis-ci.org/maegwyn/myDemoApp.svg?branch=master)](https://travis-ci.org/maegwyn/myDemoApp)
 
-Demo site: https://infinite-beyond-48139.herokuapp.com/
+Demo site: https://infinite-beyond-48139.herokuapp.com/compute
