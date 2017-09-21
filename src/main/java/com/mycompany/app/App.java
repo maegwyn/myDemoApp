@@ -15,16 +15,16 @@ public class App
     public static ArrayList<String> myMethod(ArrayList<String> array, int e, ArrayList<String> a) {
       System.out.println("inside search");
       if (array == null){
-	  	for(int i = 0;i<a.length;i++)
+	  	for(int i = 0;i<a.size();i++)
 			array.add(a.get(i));
 	  }
 
 		int count = 0;
-	  for(int elt2 : array){
+	  for(String elt2 : array){
 		  count++;
 	  }
 		
-      for (int elt : array) {
+      for (String elt : array) {
         if (count == e) array.add("TRUE");
       }
       return array;
@@ -59,7 +59,7 @@ public class App
           while (sc1.hasNext())
           {
             String value3 = sc1.next().replaceAll("\\s","");
-            inputList3.add(value);
+            inputList3.add(value3);
           }
           System.out.println(inputList3);
 			
@@ -71,8 +71,10 @@ public class App
           ArrayList <String> fullList = App.myMethod(inputList, input2AsInt,inputList3);
 
 		  boolean result = false;
-		  if(fullList.get(fullList.size()-1) == true)	
+		  if(fullList.get(fullList.size()-1) == "TRUE"){	
 			result = true;
+		    fullList.remove(fullList.size()-1);		//removing the last element  if it is "True"			
+		  }
 			
          Map map = new HashMap();
           map.put("result", result);
