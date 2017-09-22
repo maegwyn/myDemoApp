@@ -73,11 +73,11 @@ public class AppTest
 
     public void testEmptyList() {
       ArrayList<String> array = new ArrayList<>();
-      assertTrue(new App().search(array, 0, array));
+      assertTrue(new App().myMethod(array, "", 0));
     }
 
     public void testNull() {
-      assertFalse(new App().search(null, 1, null));
+      assertFalse(new App().myMethod(null, "", 2));
     }
 
 }
