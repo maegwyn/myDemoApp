@@ -14,19 +14,19 @@ public class App
 {
     public static boolean myMethod(ArrayList<String> array, String a, int e) {
   
-	  if(array.size() == 0 || array == null || a.equals(""))
+	  if(array == null || array.size() == 0 )
 		  return false;
 		
 	  int count = 0;	
       for (String elt : array) {
-        if (elt == a) 
+        if (elt.equals(a)) 
 			count++;
       }
 		
 	  if(count == e)	
       	return true;
-	  
-	  return false;	
+
+	return false;	
     }
 
     public static void main(String[] args) {
@@ -35,8 +35,6 @@ public class App
         get("/", (req, res) -> "Hello, World");
 
         post("/compute", (req, res) -> {
-          //System.out.println(req.queryParams("input1"));
-          //System.out.println(req.queryParams("input2"));
 
           String input1 = req.queryParams("input1");
           java.util.Scanner sc1 = new java.util.Scanner(input1);
@@ -47,16 +45,18 @@ public class App
             String value = sc1.next().replaceAll("\\s","");
             inputList.add(value);
           }
-          System.out.println(inputList);
-
-
-		  String input2 = req.queryParams("input2");	
-  
+    
+          String input2 = req.queryParams("input2");	
+          java.util.Scanner sc2 = new java.util.Scanner(input2);	
+          sc2.useDelimiter("[;\r\n]+");
+          String value2 = sc2.next().replaceAll(" ", "").replaceAll("\\s","");
+            
+			
 			
           String input3 = req.queryParams("input3").replaceAll("\\s","");
-          int input3AsInt = Integer.parseInt(input3);
-
-          boolean result = App.myMethod(inputList, input2, input3AsInt);
+          int input3AsInt = Integer.parseInt(input3);	
+			
+          boolean result = App.myMethod(inputList, value2, input3AsInt);
 
          Map map = new HashMap();
           map.put("result", result);
