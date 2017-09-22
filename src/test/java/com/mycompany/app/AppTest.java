@@ -41,27 +41,39 @@ public class AppTest
       ArrayList<String> array1 = new ArrayList<>();
 	  array1.add("Ali");
 	  array1.add("Veli");
-      ArrayList<String> array2 = new ArrayList<>();
-	  array2.add("Burak");
-	  array2.add("Ibrahim");
+	  array1.add("Veli");
+	  array1.add("Veli");
+	  array1.add("Veli");
+	  array1.add("Veli");
+	  array1.add("Veli");
+	  array1.add("Veli");
+	  array1.add("Veli");
       
-	  assertTrue(new App().myMethod(array1, 4, array2));
+	  String input = "Veli";
+	  
+	  assertTrue(new App().myMethod(array1, input, 8));
     }
 
     public void testFalseCounter() {
       ArrayList<String> array1 = new ArrayList<>();
 	  array1.add("Ali");
 	  array1.add("Veli");
-      ArrayList<String> array2 = new ArrayList<>();
-	  array2.add("Burak");
-	  array2.add("Ibrahim");
+	  array1.add("Veli");
+	  array1.add("Veli");
+	  array1.add("Veli");
+	  array1.add("Veli");
+	  array1.add("Veli");
+	  array1.add("Veli");
+	  array1.add("Veli");
       
-	  assertFalse(new App().myMethod(array1, 6, array2));
+	  String input = "Veli";
+	  
+	  assertFalse(new App().myMethod(array1, input, 4));
     }
 
     public void testEmptyList() {
       ArrayList<String> array = new ArrayList<>();
-      assertFalse(new App().search(array, 1, array));
+      assertTrue(new App().search(array, 0, array));
     }
 
     public void testNull() {
