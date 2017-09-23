@@ -14,7 +14,7 @@ public class App
 {
     public static boolean myMethod(ArrayList<String> array, String a, int e) {
   
-	  if(array == null || array.size() == 0 )
+	  if(array == null || array.size() == 0 || e < 0 )
 		  return false;
 		
 	  int count = 0;	
