@@ -71,6 +71,23 @@ public class AppTest
 	  assertFalse(new App().myMethod(array1, input, 4));
     }
 
+	public void testNegativeNumber(){
+	  ArrayList<String> array1 = new ArrayList<>();
+	  array1.add("Ali");
+	  array1.add("Veli");
+	  array1.add("Veli");
+	  array1.add("Veli");
+	  array1.add("Veli");
+	  array1.add("Veli");
+	  array1.add("Veli");
+	  array1.add("Veli");
+	  array1.add("Veli");
+      
+	  String input = "Veli";
+
+	  assertFalse(new App().myMethod(array1, input, -2));	
+	}
+
 	public void testEmptyList() {
       ArrayList<String> array = new ArrayList<>();
       assertFalse(new App().myMethod(array, "", 0));
