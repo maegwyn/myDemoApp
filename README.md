@@ -1,6 +1,6 @@
 /**
 This program compares a list of strings(At the first form) with a given string(At the second form).
-User also gives a number at the third form. Program checks if the given word 
+User also gives a number at the third form(Must be >= 0). Program checks if the given word 
 found in the given string list as much as given number.
 **/
 
